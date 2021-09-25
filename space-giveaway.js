@@ -69,7 +69,7 @@ async (giveaway, reactor, messageReaction) => {
           .setTimestamp()
           .setTitle("<:tik:804253394326913085> Çekilişe başarı ile katıldın!")
           .setDescription(
-            `**${guildx.name}** Adlı Sunucuda ${giveaway.prize} Adlı Çekilişe Katıldın! 
+            `**${giveaway.prize}** Adlı Çekilişe Katıldın! 
 [Çekilişe git!](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID})`
           )
           .setFooter("Space Giveaway")
@@ -82,7 +82,7 @@ async (giveaway, reactor, messageReaction) => {
           .setTimestamp()
           .setTitle("<:carpi:855750448711467058> Çekiliş katılma iptal edildi!")
           .setDescription(
-            `**Çekilişe maalesef katılamadın. 
+            `Çekilişe maalesef katılamadın. 
 [Çekilişe git!](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID})`
           )
           .setFooter("Space Giveaway")
@@ -92,15 +92,14 @@ async (giveaway, reactor, messageReaction) => {
 );
 
 client.giveawaysManager.on('giveawayReactionRemoved', (giveaway, member, reaction) => {
-  const guildx = client.guilds.cache.get(giveaway.extraData.server)
-
+  
        
      return member.send( new Discord.MessageEmbed()
           .setTimestamp()
           .setTitle('<:kalem:857937104323215360> Çekilişe katılımın çekildi!')
           .setDescription(
-            `**${guildx.name}** Adlı sunucudaki çekilişe katılımın çekildi! 
-[Çekilişe git!](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID}) was recorded but you un-reacted, since you don't need **${giveaway.prize}** I would have to choose someone else 😭`
+            `Çekiliş bitene kadar zamanın var o zaman içerisinde yeniden katılabilir sin! 
+[Çekilişe git!](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID}) `
           )
           .setFooter("Space Giveaway")
       );

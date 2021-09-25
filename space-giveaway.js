@@ -76,13 +76,13 @@ async (giveaway, reactor, messageReaction) => {
           .setTimestamp()
       );
     } catch (error) {
-       const guildx = client.guilds.cache.get(giveaway.extraData.server)
+       
       messageReaction.users.remove(reactor.user);
       reactor.send( new Discord.MessageEmbed()
           .setTimestamp()
           .setTitle("<:carpi:855750448711467058> Çekiliş katılma iptal edildi!")
           .setDescription(
-            `**${guildx.name}** Adlı Sunucudaki çekilişe maalesef katılamadın. 
+            `**Çekilişe maalesef katılamadın. 
 [Çekilişe git!](https://discord.com/channels/${giveaway.guildID}/${giveaway.channelID}/${giveaway.messageID})`
           )
           .setFooter("Space Giveaway")
@@ -91,7 +91,10 @@ async (giveaway, reactor, messageReaction) => {
   }
 );
 
-cient.giveawaysManager.on('giveawayReactionRemoved', (giveaway, member, reaction) => {
+client.giveawaysManager.on('giveawayReactionRemoved', (giveaway, member, reaction) => {
+  const guildx = client.guilds.cache.get(giveaway.extraData.server)
+
+       
      return member.send( new Discord.MessageEmbed()
           .setTimestamp()
           .setTitle('<:kalem:857937104323215360> Çekilişe katılımın çekildi!')
@@ -679,7 +682,7 @@ await client.channels.cache.get("888856199670427658").send(evet)
         }
       ]
     });
-  }
+  
   }
   if (button.id === "levelc") {
     await button.defer();
@@ -785,7 +788,7 @@ await client.channels.cache.get("888856199670427658").send(evet)
       .setStyle("green")
       .setID("anamenü")
       .setLabel("Ana Menü")
-      .setEmoji("856408214315597834");
+      .setEmoji("856408214315597834")
       .setDisabled();
     const sil = new MessageButton()
       .setStyle("red")
@@ -868,7 +871,7 @@ await client.channels.cache.get("888856199670427658").send(evet)
       .setStyle("green")
       .setID("anamenü")
       .setLabel("Ana Menü")
-      .setEmoji("856408214315597834");
+      .setEmoji("856408214315597834")
       .setDisabled();
     const sil = new MessageButton()
       .setStyle("red")

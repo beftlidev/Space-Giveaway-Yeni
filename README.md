@@ -1,3 +1,4 @@
-# Get Started!
+# Bu alt yapı Uğur tarafından yapıldı
 
-Add files and start typing 🎉
+# Space Giveaway Support 
+<https://discord.gg/yr7BNFT5vM> 

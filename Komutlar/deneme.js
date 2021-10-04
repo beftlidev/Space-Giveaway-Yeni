@@ -1,58 +1,30 @@
 const Discord = require('discord.js');
- const disbut = require("discord-buttons");
-  
-  const disbutpages = require("discord-embeds-pages-buttons")
+const {MessageButton} = require("discord-buttons") 
+exports.run = async(client, message, args) => {
 
-exports.run = async (client, message, args) => {
-
-   const embed1 = new Discord.MessageEmbed()
-    .setColor("YELLOW")
-    .setTitle("1")
-    
-    const embed2 = new Discord.MessageEmbed()
-    .setColor("GREEN")
-    .setTitle("2")
-    
-    const embed3 = new Discord.MessageEmbed()
-    .setColor("PINK")
-    .setTitle("3")
-    
-    var pages = [embed1, embed2, embed3]
-    
-    disbutpages.pages(message, pages, {
-      timeout: 60*1000,
-        buttons: {
-            delete: {
-                style: "red",
-                emoji: "❌",
-                text: "Sil"
-            },
-            forward: {
-                style: "green",
-                emoji: "⏩",
-                text: "İleri"
-            },
-            backward: {
-                style: "green",
-                emoji: "⏪",
-                text: "Geri"
-            }
-        },
-        extraRows: [],
-        extraPos: "below",
-        message: "",
-        ephemeral: "Bu mesajın sahibi değilsin!"
-    })
-}
-
-exports.conf = {
-
-  aliases: []
+let oylama = 
+const embed = new Discord.MessageEmbed() 
+.setTitle("Oylama Başladı! :tada:")
+.setDescription(oylama) 
+.setColor("BLURPLE") 
+.setTimestamp() 
+const evet = new MessageButton() 
+.setStyle("green")
+.setLabel("Evet") 
+.setEmoji("881423053245009990") 
+.setID("oylamaevet") 
+const hayır = new MessageButton() 
+.setStyle("red")
+.setLabel("Hayır") 
+.setEmoji("881423084651962439") 
+.setID("oylamahayır") 
+message.channel.send({embed: embed, 
+buttons: [evet, hayır]}) 
 
 };
-
+exports.conf = {
+aliases: []
+};
 exports.help = {
-
-  name: 'deneme'
-
-}
+name: "pre-oylama"
+};

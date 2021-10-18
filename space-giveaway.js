@@ -261,13 +261,13 @@ client.on("message", async message => {
 client.setMaxListeners(50);
 
 Nuggies.connect(
-  "mongodb+srv://iugur:ub232454556263ub@cluster0.wyidf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  ""
 );
 
 const Levels = require("discord-xp");
 
 Levels.setURL(
-  "mongodb+srv://iugur:ub232454556263ub@cluster0.wyidf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  ""
 );
 
 client.on("message", async message => {
@@ -305,7 +305,7 @@ client.on("ready", () => {
 });
 
 Nuggies.connect(
-  "mongodb+srv://iugur:ub232454556263ub@cluster0.wyidf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  ""
 );
 
 Nuggies.handleInteractions(client);

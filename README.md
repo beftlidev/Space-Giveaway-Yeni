@@ -1,5 +1,5 @@
 # Bu alt yapı Uğur tarafından yapıldı
-
+# HERHANGİ BİR ŞEKİLDE BU ALT YAPIDAN KOD ALIP KULLANMAK YASAKTIR (özel botlar için bu kural geçersizdir) 
 # Selam! - Hi! 
 🇹🇷 Eğer bu projeye 100 star gelir ise şuanki slash' lı halini paylaşacam! 
 🇪🇺 If 100 stars come to this project, I'll share your current slash! 
